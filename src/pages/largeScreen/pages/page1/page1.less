@@ -1,0 +1,64 @@
+@import '~antd/es/style/themes/default.less';
+
+
+.container {
+  padding: 30px;
+}
+
+.normalCard {
+  border: solid 1px #00FFFF;
+  padding: 12px;
+
+  .cardSubTitle {
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+    }
+  }
+
+  .cardSubIcon {
+    width: 16px;
+    height: 16px;
+    background-color: #00FFFF;
+    margin-right: 8px;
+  }
+
+  .subTitleCotent {
+    font-size: 16px;
+    color: #00FFFF;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.2em;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0.2em;
+  }
+}
+
+.cardRadius {
+  border: solid 1px #00FFFF;
+  padding: 12px;
+  border-top-right-radius: 1em;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.2em;
+}
+
+.showContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

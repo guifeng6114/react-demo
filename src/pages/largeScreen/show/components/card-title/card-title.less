@@ -1,17 +1,41 @@
 @import '~antd/es/style/themes/default.less';
 
 .title-container {
-  width: 100%;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  span {
+    display: block;
+  }
 }
 
-.radius {
-  border-top-left-radius: .5em;
-  border-top: solid .1em #08feff;
-  border-left: solid .1em #08feff;
+.title {
+  display: flex;
+  color: white;
+  border: solid 1px #00FFFF;
+  border-bottom: 0;
+  padding: 10px;
+  align-items: center;
 }
 
-.conner {
-  width: 0;
-  height: 0;
+.titleContent {
+  font-size: 18px;
+  line-height: 20px;
+  margin-left: 6px;
+}
+
+.titleIcon {
+  width: 20px;
+  height: 20px;
+  background: center / contain no-repeat;
+
+  &.user {
+    background-image: url('../../../../../assets/img/user.png');
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
 }

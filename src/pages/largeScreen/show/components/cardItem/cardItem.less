@@ -1,0 +1,40 @@
+
+
+.cardItem {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: block;
+    color: white;
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+
+    &.hospDisc {
+      background-image: url('../../../../../assets/img/hosp_disc.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .itemName {
+    margin-right: 8px;
+
+    > em {
+      font-style: normal;
+      font-size: .5rem;
+    }
+
+    &.number {
+      color: #FF4570;
+    }
+
+
+  }
+}

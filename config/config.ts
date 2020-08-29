@@ -36,6 +36,7 @@ export default defineConfig({
         {
           name: 'screen-page',
           path: 'screen-page',
+          component: './largeScreen/pages'
         }
       ],
     },

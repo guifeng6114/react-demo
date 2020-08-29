@@ -1,0 +1,51 @@
+
+.showItem {
+  border: solid 1px #00FFFF;
+  border-bottom: 0;
+
+  &:not(:last-child) {
+    border-right: 0;
+  }
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:last-child {
+    border-top-right-radius: 1em;
+  }
+
+  .showSub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+
+    span {
+      display: block;
+    }
+  }
+
+  .showIcon {
+    width: 16px;
+    height: 16px;
+    background-color: #00FFFF;
+    margin-right: 6px;
+  }
+
+  .showName {
+    font-size: 16px;
+    line-height: 16px;
+    color: #00FFFF;
+  }
+
+  .showData {
+    font-size: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 6px;
+  }
+
+}
