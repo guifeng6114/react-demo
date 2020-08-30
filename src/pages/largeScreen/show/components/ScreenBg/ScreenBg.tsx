@@ -8,14 +8,15 @@ export interface SCreenBgParams {
 }
 
 export default ({ children, name, iconType }: any) => {
-  console.log(children);
   return (
-    <div className={ styles.bg }>
-      <h2 className={ styles.screenTitle }>
-        <span className={ styles.icon } />
-        <span className={ styles.titleContent }>{name}</span>
-      </h2>
-      { children }
+    <div className={styles.bg}>
+      <div className={styles.fixedContainer}>
+        <h2 className={styles.screenTitle}>
+          <span className={styles.icon} />
+          <span className={styles.titleContent}>{name}</span>
+        </h2>
+        {children}
+      </div>
     </div>
   );
 };

@@ -15,11 +15,13 @@ export default () => {
     <Fragment>
       <ResizeObserver
         onResize={({ width }) => {
-          // console.log(width);
           const rootElement = document.getElementsByTagName('html')[0];
-          const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
-          rootElement.style.fontSize = width / 1920 * 16 + 'px';
-          // console.log(fontSizeRoot);
+          // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
+          if (width <= 1760) {
+            rootElement.style.fontSize = width / 1760 * 16 + 'px';
+            return;
+          }
+          rootElement.style.fontSize = '16px';
         }}
       >
         <ScreenBg name="营销大屏">
