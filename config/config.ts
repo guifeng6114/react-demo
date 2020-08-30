@@ -35,8 +35,19 @@ export default defineConfig({
         },
         {
           name: 'screen-page',
-          path: 'screen-page',
-          component: './largeScreen/pages'
+          path: '/screen-page',
+          routes: [
+            {
+              name: 'page1',
+              path: 'page1',
+              component: './largeScreen/page1'
+            },
+            {
+              name: 'page2',
+              path: 'page2',
+              component: './largeScreen/page2'
+            }
+          ]
         }
       ],
     },
