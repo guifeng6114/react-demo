@@ -29,11 +29,13 @@ export interface ScreenCardProps {
   className?: string;
   extra?: string | ReactNode;
   title?: string | ReactNode;
+  titleColor?: string;
   titleBorderHighLight?: boolean;
   children?: ReactNode;
   borderWidth?: number;
   borderColor?: string;
   highLightBorderWidth?: number;
+  highLightBorderColor?: string;
   rightTopCorner?: defaultCorner | arcCorner | cutCorner | polygonCorner;
   rightBottomCorner?: defaultCorner | arcCorner | cutCorner | polygonCorner;
   leftBottomCorner?: defaultCorner | arcCorner | cutCorner | polygonCorner;
@@ -48,6 +50,7 @@ interface Size {
 
 const defaultProps: ScreenCardProps = {
   titleBorderHighLight: true,
+  titleColor: '#fff',
   borderWidth: 1,
   borderColor: '#fff',
   highLightBorderColor: '#000',
@@ -67,6 +70,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
   const {
     title,
     titleBorderHighLight,
+    titleColor,
     extra,
     className,
     children,
@@ -209,7 +213,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
     } else {
       leftLineTop = []
     }
-    
+
 
     leftLine = ['L', left, leftLineTop];
 
@@ -231,7 +235,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
     } else {
       leftTopLine = []
     }
-    
+
 
     // draw topLine
     let topLineRight;
@@ -247,7 +251,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
       } else {
         topLineRight = right - rightTopCorner.width;
       }
-      
+
     }
     topLine = ['L', topLineRight, top];
 
@@ -268,7 +272,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
           'L', right, top + rightTopCorner.height / 2,
         ]
       }
-      
+
     }
 
     const d = [
@@ -296,7 +300,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
     const bottom = cardSize.height - highLightBorderWidth / 2;
     const left = highLightBorderWidth / 2;
     const titleTop = highLightBorderWidth / 2;
-    
+
     const titleLine = [
       'M', left, top + highLightBorderWidth / 2,
       'L', left, titleTop + titleSize.height / 2,
@@ -305,12 +309,12 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
       'L', titleSize.width, top,
       'L', Math.min(right - left, titleSize.width + titleSize.height / 1.5), top
     ];
-    
+
 
     const d = titleLine.join(' ')
     return d;
   }, [ cardSize, titleSize ])
- 
+
   return (
     <ResizeObserver onResize={(size:Size):void => setCardSize(size)}>
       <div>
@@ -335,7 +339,7 @@ const ScreenCard: React.FC<ScreenCardProps> = (props) => {
             <div className={styles.header}>
               <ResizeObserver onResize={(size:Size):void => {setTitleSize(size)}}>
                 <div>
-                  <div className={styles.title} style={{paddingRight: titleSize.height * Math.tan(33 * Math.PI / 180), paddingLeft: titleSize.height / 2}}>
+                  <div className={styles.title} style={{paddingRight: titleSize.height * Math.tan(33 * Math.PI / 180), paddingLeft: titleSize.height / 2, color: titleColor}}>
                     {title}
                   </div>
                 </div>

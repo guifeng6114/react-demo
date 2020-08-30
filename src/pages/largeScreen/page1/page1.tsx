@@ -20,7 +20,7 @@ export default () => {
           const rootElement = document.getElementsByTagName('html')[0];
           // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
           if (width <= 1760) {
-            rootElement.style.fontSize = width / 1760 * 16 + 'px';
+            rootElement.style.fontSize = `${width / 1760 * 16  }px`;
             return;
           }
           rootElement.style.fontSize = '16px';
@@ -48,9 +48,11 @@ export default () => {
                     }}
                     leftTopCorner={{
                       type: 'polygon',
-                      width: 60,
-                      height: 22
+                      width: 20,
+                      height: 88
                     }}
+                    borderColor="#0ff"
+                    highLightBorderColor="#0ff"
                   >
                     <div className={styles.cardContent}>
                       <CardContentItem name="用户关注总数" data="467" />
