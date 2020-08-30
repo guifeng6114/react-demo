@@ -1,0 +1,43 @@
+@rect-count: 18;
+@rect-size: 4px;
+@rect-margin-x: 2px;
+@rect-color-dark: #0a758b;
+@rect-color-light: #08feff;
+
+@loadingbar-width: (@rect-size + @rect-margin-x * 2) * @rect-count;
+
+.loadingBar {
+  overflow: hidden;
+  width: @loadingbar-width;
+
+  .rectList {
+    display: flex;
+    width: @loadingbar-width * 2;
+    transform: translateX(-@loadingbar-width);
+    animation: moveToRight 1.2s steps(19) infinite both;
+  }
+  
+  .rectItem {
+    flex: 0 0 @rect-size;
+    width: @rect-size;
+    height: @rect-size;
+    margin-right: @rect-margin-x;
+    margin-left: @rect-margin-x;
+    background-color: @rect-color-dark;
+  }
+  
+  .rectItemLight {
+    background-color: @rect-color-light;
+  }
+}
+
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-@loadingbar-width);
+  }
+
+  100% {
+    transform: translateX(@rect-size + @rect-margin-x * 2);
+  }
+}

@@ -7,6 +7,8 @@ import CardContentItem from '../show/components/cardContentItem/cardContentItem'
 import CardTitle from '../show/components/card-title/card-title';
 import styles from './page1.less';
 import ResizeObserver from 'rc-resize-observer';
+import ScreenCard from '@/components/ScreenCard';
+import LoadingBar from '@/components/LoadingBar';
 
 export default () => {
   const style = { background: '#0092ff', padding: '8px 0' };
@@ -28,7 +30,38 @@ export default () => {
           <div className={styles.container}>
             <Row gutter={16}>
               <Col className="gutter-row" span={7}>
-                <div>
+                <ScreenCard
+                    title="客户数据"
+                    extra={<LoadingBar />}
+                    rightTopCorner={{
+                      type: 'arc',
+                      radius: 12,
+                    }}
+                    rightBottomCorner={{
+                      type: 'polygon',
+                      width: 60,
+                      height: 8
+                    }}
+                    leftBottomCorner={{
+                      type: 'cut',
+                      width: 12,
+                    }}
+                    leftTopCorner={{
+                      type: 'polygon',
+                      width: 60,
+                      height: 22
+                    }}
+                  >
+                    <div className={styles.cardContent}>
+                      <CardContentItem name="用户关注总数" data="467" />
+                      <CardContentItem name="活跃关注用户总数" data="467" />
+                      <CardContentItem name="注册用户总数" data="467" />
+                      <CardContentItem name="活跃注册用户总数" data="467" />
+                    </div>
+
+                  </ScreenCard>
+                {/* <div>
+
                   <CardTitle iconType="user" name="客户数据" />
                   <div className={`${styles.cardRadius}`}>
                     <div className={styles.cardContent}>
@@ -38,7 +71,7 @@ export default () => {
                       <CardContentItem name="活跃注册用户总数" data="467" />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div style={{ marginTop: '60px' }}>
                   <CardTitle iconType="user" name="客户数据" />
