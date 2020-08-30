@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import { Row, Col } from 'antd';
+import ResizeObserver from 'rc-resize-observer';
+import ScreenCard from '@/components/ScreenCard';
+import LoadingBar from '@/components/LoadingBar';
 import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import CardItem from '../show/components/cardItem/cardItem';
 import ShowContentItem from '../show/components/showContentItem/showContentItem';
 import CardContentItem from '../show/components/cardContentItem/cardContentItem';
 import CardTitle from '../show/components/card-title/card-title';
 import styles from './page1.less';
-import ResizeObserver from 'rc-resize-observer';
-import ScreenCard from '@/components/ScreenCard';
-import LoadingBar from '@/components/LoadingBar';
 
 export default () => {
   const style = { background: '#0092ff', padding: '8px 0' };
