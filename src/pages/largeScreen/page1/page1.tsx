@@ -38,7 +38,7 @@ export default () => {
                   }
                   extra={
                     <div className={styles.loadingContainer}>
-                      <LoadingBar />
+                      <LoadingBar className="" />
                     </div>
                   }
                   rightTopCorner={{
@@ -77,7 +77,7 @@ export default () => {
                     }
                     extra={
                       <div className={styles.loadingContainer}>
-                        <LoadingBar />
+                        <LoadingBar className="" />
                       </div>
                     }
                     rightTopCorner={{
@@ -202,7 +202,7 @@ export default () => {
                       }
                       extra={
                         <div className={styles.loadingContainer}>
-                          <LoadingBar />
+                          <LoadingBar className="" />
                         </div>
                       }
                       rightTopCorner={{

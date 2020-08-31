@@ -1,0 +1,39 @@
+
+.borderContainer {
+	position: relative;
+	border: solid 1px #00FFFF;
+}
+
+.corner {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+
+	&.topLeft {
+		border-top: solid 4px #0ff;
+		border-left: solid 4px #0ff;
+		left: -2px;
+		top: -2px;
+	}
+
+	&.topRight {
+		border-top: solid 4px #0ff;
+		border-right: solid 4px #0ff;
+		right: -2px;
+		top: -2px;
+	}
+
+	&.bottomRight {
+		border-bottom: solid 4px #0ff;
+		border-right: solid 4px #0ff;
+		right: -2px;
+		bottom: -2px;
+	}
+
+	&.bottomLeft {
+		border-bottom: solid 4px #0ff;
+		border-left: solid 4px #0ff;
+		left: -2px;
+		bottom: -2px;
+	}
+}
