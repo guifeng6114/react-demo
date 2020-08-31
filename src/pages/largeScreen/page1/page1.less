@@ -52,14 +52,38 @@
 }
 
 .cardContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 0.2em;
-  padding: 1rem;
+  padding: 1.125rem;
+  padding-top: .625rem;
+  border-top: solid 1px #00FFFF;
+  margin: 0 2px;
+
+  &.noBorder {
+    border-top: 0;
+  }
 }
 
 .showContent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 12px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.2em;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.2em;
 }

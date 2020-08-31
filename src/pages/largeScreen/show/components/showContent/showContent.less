@@ -1,25 +1,21 @@
 
 .showItem {
-  border: solid 1px #00FFFF;
   border-bottom: 0;
+  flex: 1;
 
   &:not(:last-child) {
-    border-right: 0;
+    border-right: solid 1px #00FFFF;
   }
 
   &:first-child {
     border-top: 0;
   }
 
-  &:last-child {
-    border-top-right-radius: 1em;
-  }
-
   .showSub {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: .75rem;
+    margin-top: 1rem;
 
     span {
       display: block;
@@ -45,7 +41,12 @@
     color: white;
     text-align: center;
     margin-bottom: 1rem;
-    margin-top: .625rem;
+    margin-top: .25rem;
   }
 
+}
+
+.showContent {
+  display: flex;
+  justify-content: space-evenly;
 }
