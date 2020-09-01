@@ -7,7 +7,6 @@ import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import CardItem from '../show/components/cardItem/cardItem';
 import ShowContent from '../show/components/showContent/showContent';
 import CardContentItem from '../show/components/cardContentItem/cardContentItem';
-import CardTitle from '../show/components/card-title/card-title';
 import styles from './page1.less';
 import ScreenCardTitle from '../show/components/screenCardTitle/screenCardTitle';
 import classNames from 'classnames';
