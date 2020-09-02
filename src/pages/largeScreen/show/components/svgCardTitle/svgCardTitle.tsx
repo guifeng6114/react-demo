@@ -14,7 +14,7 @@ export default ({ children, widthPercent }: SvgCardTitleParams) => {
 	const lineHeight = titleSize.height;
 
 	return (
-		<div className={styles.titleContainer} style={{ width: `${widthPercent}%` }}>
+		<div className={styles.titleContainer}>
 			<div className={styles.svgContainer}>
 				<svg>
 					<path
@@ -28,7 +28,7 @@ export default ({ children, widthPercent }: SvgCardTitleParams) => {
 					setTitleSize(size);
 				}}
 			>
-				<div className={styles.titleContainer}>
+				<div className={styles.title}>
 					{children}
 				</div>
 			</ResizeObserver>
