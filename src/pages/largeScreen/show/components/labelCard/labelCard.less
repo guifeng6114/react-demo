@@ -1,0 +1,35 @@
+
+
+.labelCard {
+  background-color: #0071BC;
+  position: relative;
+  width: max-content;
+  height: 26px;
+  line-height: 26px;
+  font-size: 18px;
+  color: #FCEE21;
+  padding: 0 20px;
+  font-weight: normal;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-right-color: #0071BC;
+    left: -26px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #0ff;
+    left: -4px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

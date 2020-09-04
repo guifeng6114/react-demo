@@ -4,6 +4,15 @@
   display: flex;
   align-items: flex-end;
 
+  &.withBorder:not(:last-child) {
+    border-right: solid 1px #0ff;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
   span {
     display: block;
   }

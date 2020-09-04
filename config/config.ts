@@ -43,6 +43,11 @@ export default defineConfig({
               component: './largeScreen/page1'
             },
             {
+              name: 'page2',
+              path: 'page2',
+              component: './largeScreen/page2'
+            },
+            {
               name: 'page3',
               path: 'page3',
               component: './largeScreen/page3'

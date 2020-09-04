@@ -4,8 +4,10 @@ import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import styles from '../page1/page1.less';
 import LoadingAnime from '../show/components/load-anime/loading-anime';
 import page4Styles from './page4.less';
+import LoadingBar from '@/components/LoadingBar';
 import CardItem from '../show/components/cardItem/cardItem';
 import CommentsPool from '../show/components/commentsPool/commentsPool';
+import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import BorderWithCorner from '../show/components/borderWithCorner';
 import { Row, Col } from 'antd';
 
@@ -28,15 +30,17 @@ export default () => {
           <Row gutter={16}>
             <Col className="gutter-row" span={5}>
               <div className={page4Styles.blockArea}>
-                <div className={page4Styles.title}>
-                  <div className={page4Styles.titleLoading}>
-                    <LoadingAnime />
+                <SvgCardTitle>
+                  <div className={page4Styles.title}>
+                    <div className={page4Styles.titleLoading}>
+                      <LoadingBar className="" />
+                    </div>
+                    <div className={page4Styles.titleArea}>
+                      <span className={page4Styles.titleIcon} />
+                      <span>用户行为</span>
+                    </div>
                   </div>
-                  <div className={page4Styles.titleArea}>
-                    <span className={page4Styles.titleIcon} />
-                    <span>用户行为</span>
-                  </div>
-                </div>
+                </SvgCardTitle>
                 <BorderWithCorner topLeft={true} topRight={true}>
                   <div className={page4Styles.meetingContent}>
                     <div className={page4Styles.meetingItem}>
@@ -59,15 +63,17 @@ export default () => {
               </div>
 
               <div className={page4Styles.blockArea} style={{ marginTop: '30px' }}>
-                <div className={page4Styles.title}>
-                  <div className={page4Styles.titleLoading}>
-                    <LoadingAnime />
+                <SvgCardTitle>
+                  <div className={page4Styles.title}>
+                    <div className={page4Styles.titleLoading}>
+                      <LoadingAnime />
+                    </div>
+                    <div className={page4Styles.titleArea}>
+                      <span className={page4Styles.titleIcon} />
+                      <span>用户行为</span>
+                    </div>
                   </div>
-                  <div className={page4Styles.titleArea}>
-                    <span className={page4Styles.titleIcon} />
-                    <span>用户行为</span>
-                  </div>
-                </div>
+                </SvgCardTitle>
                 <BorderWithCorner topLeft={true} topRight={true}>
                   <div className={page4Styles.action}>
                     <span className={page4Styles.actionIcon} />
@@ -85,15 +91,17 @@ export default () => {
               </div>
 
               <div className={page4Styles.blockArea} style={{ marginTop: '30px' }}>
-                <div className={page4Styles.title}>
-                  <div className={page4Styles.titleLoading}>
-                    <LoadingAnime />
+                <SvgCardTitle>
+                  <div className={page4Styles.title}>
+                    <div className={page4Styles.titleLoading}>
+                      <LoadingAnime />
+                    </div>
+                    <div className={page4Styles.titleArea}>
+                      <span className={page4Styles.titleIcon} />
+                      <span>用户医院汇总</span>
+                    </div>
                   </div>
-                  <div className={page4Styles.titleArea}>
-                    <span className={page4Styles.titleIcon} />
-                    <span>用户医院汇总</span>
-                  </div>
-                </div>
+                </SvgCardTitle>
                 <div className={page4Styles.hospitalList}>
                   <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
                   <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
@@ -122,17 +130,17 @@ export default () => {
                   </div>
                 </div>
                 <BorderWithCorner topLeft={true} topRight={true}>
-                <div className={page4Styles.commentsContainer}>
-                  <CommentsPool
-                    comments={
-                      [
-                        { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' },
-                        { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' },
-                        { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' }
-                      ]
-                    }
-                  />
-                </div>
+                  <div className={page4Styles.commentsContainer}>
+                    <CommentsPool
+                      comments={
+                        [
+                          { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' },
+                          { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' },
+                          { user: '张三', comment: '11111111111111111111111111111111111111111111111111111111111111' }
+                        ]
+                      }
+                    />
+                  </div>
                 </BorderWithCorner>
               </div>
             </Col>
