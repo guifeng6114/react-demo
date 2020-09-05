@@ -23,7 +23,15 @@
 		width: 1.125rem;
 		height: 1.125rem;
 		background-color: #0ff;
-		margin-right: .625rem;
+    margin-right: .625rem;
+    
+    &.mark {
+      background: url('../../../assets/img/mark.png') center / contain no-repeat;
+    }
+
+    &.catelog {
+      background: url('../../../assets/img/catelogue.png') center / contain no-repeat;
+    }
 	}
 
 	.titleName {
@@ -42,13 +50,14 @@
   .infoItem, .labelItem {
     display: flex;
     align-items: center;
+    padding: 5px;
   }
 
   .infoIcon, .labelIcon {
     width: 12px;
     height: 12px;
-    background-color: #0ff;
     margin-right: 8px;
+    background: url('../../../assets/img/hosp_disc.png') center / contain no-repeat;
   }
 
   .infoText {
@@ -77,22 +86,71 @@
   }
 }
 
+.centerTitleTop {
+  display: flex;
+  padding: 4px 0;
+  align-items: center;
+
+  &.reverse {
+    flex-direction: row-reverse;
+
+    .centerTitleIcon {
+      margin-left: 8px;
+    }
+
+    .centerTitleText {
+      margin-right: 50px;
+    }
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  .centerTitleIcon {
+    width: 14px;
+    height: 14px;
+    background-color: #0ff;
+    margin-left: 30px;
+    margin-right: 8px;
+    
+    &.chat {
+      background: url('../../../assets/img/chat.png') center / contain no-repeat;
+    }
+
+    &.star {
+      background: url('../../../assets/img/star.png') center / contain no-repeat;
+    }
+  }
+
+  .centerTitleText {
+    font-size: 20px;
+    color: #0ff;
+  }
+}
+
 .contentCenterBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px 0;
 
   .centerItem {
     display: flex;
     align-items: center;
     line-height: 29px;
+    padding: 6px;
   }
 
   .centerIcon {
     width: 12px;
     height: 12px;
     background-color: #0ff;
+    background: url('../../../assets/img/hosp_disc.png') center / contain no-repeat;
+
+    &:nth-child(3) {
+      margin-left: 30px;
+    }
   }
 
   .centerTitle {
@@ -106,4 +164,36 @@
     color: #FCEE21;
     margin-left: 12px;
   }
+}
+
+.bodyBg {
+  position: relative;
+  width: 700px;
+  background: url('../../../assets/img/body.png') center / contain no-repeat;
+  height: 552px;
+  right: 192px;
+  top: 70px;
+
+  .line1 {
+    width: inherit;
+    position: absolute;
+    background: url('../../../assets/img/line1.png') center / contain no-repeat;
+    height: 60px;
+    top: -44px;
+    left: -130px;
+  }
+
+  .line2 {
+    width: inherit;
+    position: absolute;
+    background: url('../../../assets/img/line2.png') center / contain no-repeat;
+    height: 66px;
+    top: -40px;
+    right: -134px;
+  }
+}
+
+.map {
+  position: relative;
+  bottom: 80px;
 }

@@ -24,7 +24,7 @@ export default () => {
         rootElement.style.fontSize = '16px';
       }}
     >
-      <ScreenBg name="热点内容">
+      <ScreenBg name="热点内容" iconType="page3">
         <div className={styles.container}>
           <Row gutter={16}>
             <Col className="gutter-row" span={8}>
@@ -34,7 +34,7 @@ export default () => {
                     <LoadingBar className="" />
                   </div>
                   <div className={styles.titleContainer}>
-                    <span className={styles.titleIcon} />
+                    <span className={classNames(styles.titleIcon, styles.user_ac)} />
                     <span className={styles.titleName}>用户行为</span>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export default () => {
                     <LoadingBar className="" />
                   </div>
                   <div className={styles.titleContainer}>
-                    <span className={styles.titleIcon} />
+                    <span className={classNames(styles.titleIcon, styles.user_ac)} />
                     <span className={styles.titleName}>用户行为</span>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default () => {
                     <LoadingBar className="" />
                   </div>
                   <div className={styles.titleContainer}>
-                    <span className={styles.titleIcon} />
+                    <span className={classNames(styles.titleIcon, styles.hosp_bl)} />
                     <span className={styles.titleName}>用户医院汇总</span>
                   </div>
                 </div>

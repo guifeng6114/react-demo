@@ -5,6 +5,7 @@ import styles from '../page1/page1.less';
 import LoadingAnime from '../show/components/load-anime/loading-anime';
 import page4Styles from './page4.less';
 import LoadingBar from '@/components/LoadingBar';
+import classNames from 'classnames';
 import CardItem from '../show/components/cardItem/cardItem';
 import CommentsPool from '../show/components/commentsPool/commentsPool';
 import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
@@ -25,7 +26,7 @@ export default () => {
         rootElement.style.fontSize = '16px';
       }}
     >
-      <ScreenBg name="热点会议">
+      <ScreenBg name="热点会议" iconType="page4">
         <div className={styles.container}>
           <Row gutter={16}>
             <Col className="gutter-row" span={5}>
@@ -36,7 +37,7 @@ export default () => {
                       <LoadingBar className="" />
                     </div>
                     <div className={page4Styles.titleArea}>
-                      <span className={page4Styles.titleIcon} />
+                      <span className={classNames(page4Styles.titleIcon, page4Styles.user_ac)} />
                       <span>用户行为</span>
                     </div>
                   </div>
@@ -69,7 +70,7 @@ export default () => {
                       <LoadingAnime />
                     </div>
                     <div className={page4Styles.titleArea}>
-                      <span className={page4Styles.titleIcon} />
+                      <span className={classNames(page4Styles.titleIcon, page4Styles.user_ac)} />
                       <span>用户行为</span>
                     </div>
                   </div>
@@ -97,7 +98,7 @@ export default () => {
                       <LoadingAnime />
                     </div>
                     <div className={page4Styles.titleArea}>
-                      <span className={page4Styles.titleIcon} />
+                      <span className={classNames(page4Styles.titleIcon, page4Styles.hosp_bl)} />
                       <span>用户医院汇总</span>
                     </div>
                   </div>
@@ -120,15 +121,17 @@ export default () => {
               <div className={page4Styles.map} />
 
               <div className={`${page4Styles.blockArea} ${page4Styles.comments}`}>
-                <div className={page4Styles.title}>
-                  <div className={page4Styles.titleLoading}>
-                    <LoadingAnime />
+                <SvgCardTitle>
+                  <div className={page4Styles.title}>
+                    <div className={page4Styles.titleLoading}>
+                      <LoadingAnime />
+                    </div>
+                    <div className={page4Styles.titleArea}>
+                      <span className={classNames(page4Styles.titleIcon, page4Styles.comments_icon)} />
+                      <span>实施留言信息</span>
+                    </div>
                   </div>
-                  <div className={page4Styles.titleArea}>
-                    <span className={page4Styles.titleIcon} />
-                    <span>实施留言信息</span>
-                  </div>
-                </div>
+                </SvgCardTitle>
                 <BorderWithCorner topLeft={true} topRight={true}>
                   <div className={page4Styles.commentsContainer}>
                     <CommentsPool

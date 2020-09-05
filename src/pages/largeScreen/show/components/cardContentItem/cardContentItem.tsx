@@ -16,7 +16,7 @@ export default ({
   data,
   needBorder = false,
   needCenter = false,
-  iconType,
+  iconType = '',
   style 
 }: CardItemParams) => {
 
@@ -29,7 +29,7 @@ export default ({
       )}
       style={ style }
     >
-      <span className={styles.contentIcon} />
+      <span className={classNames(styles.contentIcon, styles[iconType])} />
       <span className={styles.contentTitle}>{name}</span>
       <span className={styles.contentData}>{data}</span>
     </div>

@@ -27,7 +27,7 @@ export default () => {
           rootElement.style.fontSize = '16px';
         }}
       >
-        <ScreenBg name="营销大屏">
+        <ScreenBg name="营销大屏" iconType="screen">
           <div className={styles.container}>
             <Row gutter={16}>
               <Col className="gutter-row" span={7}>
@@ -62,17 +62,17 @@ export default () => {
                   highLightBorderColor="#0ff"
                 >
                   <div className={classNames(styles.cardContent, styles.noBorder, styles['grid-2'])}>
-                    <CardContentItem name="用户关注总数" data="467" />
-                    <CardContentItem name="活跃关注用户总数" data="467" />
-                    <CardContentItem name="注册用户总数" data="467" />
-                    <CardContentItem name="活跃注册用户总数" data="467" />
+                    <CardContentItem name="用户关注总数" data="467" iconType="like" />
+                    <CardContentItem name="活跃关注用户总数" data="467" iconType="active" />
+                    <CardContentItem name="注册用户总数" data="467" iconType="register" />
+                    <CardContentItem name="活跃注册用户总数" data="467" iconType="active_user" />
                   </div>
                 </ScreenCard>
 
                 <div style={{ marginTop: '10px' }}>
                   <ScreenCard
                     title={
-                      <ScreenCardTitle title="内容数据" iconType="user" />
+                      <ScreenCardTitle title="内容数据" iconType="data" />
                     }
                     extra={
                       <div className={styles.loadingContainer}>
@@ -94,15 +94,15 @@ export default () => {
                     <ShowContent
                       dataList={
                         [
-                          { name: '内容总数', data: '467' },
-                          { name: '内容总数', data: '467' },
-                          { name: '内容总数', data: '467' }
+                          { name: '内容总数', data: '467', iconType: 'meet_total' },
+                          { name: '内容总数', data: '467', iconType: 'explore' },
+                          { name: '内容总数', data: '467', iconType: 'share' }
                         ]
                       }
                     />
                     <div className={classNames(styles['grid-2'], styles.cardContent)}>
-                      <CardContentItem iconType="test" name="平均浏览量" data="467" />
-                      <CardContentItem iconType="test" name="平均浏览量" data="467" />
+                      <CardContentItem iconType="meet_average" name="平均浏览量" data="467" />
+                      <CardContentItem iconType="av_stay" name="平均浏览量" data="467" />
                     </div>
                   </ScreenCard>
                 </div>
@@ -110,7 +110,7 @@ export default () => {
                 <div style={{ marginTop: '30px' }}>
                   <div className={`${styles.normalCard}`}>
                     <h4 className={styles.cardSubTitle}>
-                      <span className={styles.cardSubIcon} />
+                      <span className={classNames(styles.cardSubIcon, styles.hospIcon)} />
                       <span className={styles.subTitleCotent}>医疗领域汇总数</span>
                     </h4>
                     <div className={styles['grid-3']}>
@@ -171,7 +171,7 @@ export default () => {
                 <div style={{ marginTop: '30px' }}>
                   <div className={`${styles.card} ${styles.normalCard}`}>
                     <h4 className={styles.cardSubTitle}>
-                      <span className={styles.cardSubIcon} />
+                      <span className={classNames(styles.cardSubIcon, styles.cupIcon)} />
                       <span className={styles.subTitleCotent}>TOP10活跃内容排名</span>
                     </h4>
                     <div className={styles['grid-2']}>
@@ -197,7 +197,7 @@ export default () => {
                   <Col className="gutter-row" span={10}>
                     <ScreenCard
                       title={
-                        <ScreenCardTitle title="会议数据" iconType="user" />
+                        <ScreenCardTitle title="会议数据" iconType="meeting" />
                       }
                       extra={
                         <div className={styles.loadingContainer}>
@@ -219,17 +219,17 @@ export default () => {
                       <ShowContent
                         dataList={
                           [
-                            { name: '会议总数', data: '467' },
-                            { name: '会议时常总数', data: '467' },
-                            { name: '会议观众人次总数', data: '467' }
+                            { name: '会议总数', data: '467', iconType: 'meet_total' },
+                            { name: '会议时常总数', data: '467', iconType: 'meet_total' },
+                            { name: '会议观众人次总数', data: '467', iconType: 'meet_total' }
                           ]
                         }
                       />
                       <div className={classNames(styles['grid-2'], styles.cardContent)}>
-                        <CardContentItem iconType="test" name="会议平均时长" data="467" />
-                        <CardContentItem iconType="test" name="会议平均观众数" data="467" />
-                        <CardContentItem iconType="test" name="会议平均留言数" data="467" />
-                        <CardContentItem iconType="test" name="会议平均点赞数" data="467" />
+                        <CardContentItem iconType="meet_average" name="会议平均时长" data="467" />
+                        <CardContentItem iconType="meet_people" name="会议平均观众数" data="467" />
+                        <CardContentItem iconType="meet_comment" name="会议平均留言数" data="467" />
+                        <CardContentItem iconType="meet_like" name="会议平均点赞数" data="467" />
                       </div>
                     </ScreenCard>
 
@@ -250,7 +250,7 @@ export default () => {
                         titleBorderHighLight={false}
                       >
                         <h4 className={styles.cardSubTitle}>
-                          <span className={styles.cardSubIcon} />
+                          <span className={classNames(styles.cardSubIcon, styles.hospIcon)} />
                           <span className={styles.subTitleCotent}>医疗领域汇总数</span>
                         </h4>
                         <div className={styles['grid-3']}>
@@ -272,7 +272,7 @@ export default () => {
                     <div style={{ marginTop: '30px' }}>
                       <div className={`${styles.card} ${styles.normalCard}`}>
                         <h4 className={styles.cardSubTitle}>
-                          <span className={styles.cardSubIcon} />
+                          <span className={classNames(styles.cardSubIcon, styles.cupIcon)} />
                           <span className={styles.subTitleCotent}>TOP10活跃内容排名</span>
                         </h4>
                         <div className={styles['grid-2']}>

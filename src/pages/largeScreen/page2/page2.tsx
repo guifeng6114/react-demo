@@ -5,8 +5,10 @@ import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import BorderWithCorner from '../show/components/borderWithCorner';
 import LoadingBar from '../../../components/LoadingBar';
 import LabelCard from '../show/components/labelCard/labelCard';
+import ContentLabel from '../show/components/contentLabelItem/contentLabelItem';
 import styles from './page2.less';
 import { Row, Col } from 'antd';
+import classNames from 'classnames';
 
 export default () => {
 
@@ -22,9 +24,9 @@ export default () => {
         rootElement.style.fontSize = '16px';
       }}
     >
-      <ScreenBg name="医生画像">
+      <ScreenBg name="医生画像" iconType="pen">
         <div className={styles.container}>
-          <Row gutter={16}>
+          <Row gutter={[16, 40]}>
             <Col className="gutter-row" offset={1} span={6}>
               <div>
                 <SvgCardTitle>
@@ -33,7 +35,7 @@ export default () => {
                       <LoadingBar className="" />
                     </div>
                     <div className={styles.titleContainer}>
-                      <span className={styles.titleIcon} />
+                      <span className={classNames(styles.titleIcon, styles.mark)} />
                       <span className={styles.titleName}>用户标签</span>
                     </div>
                   </div>
@@ -73,6 +75,10 @@ export default () => {
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={5}>
+              <div className={classNames(styles.centerTitleTop, styles.reverse)}>
+                <span className={styles.centerTitleText} >会议标签</span>
+                <span className={classNames(styles.centerTitleIcon, styles.chat)} />
+              </div>
               <BorderWithCorner bottomRight={true}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="用户粘性" />
@@ -88,7 +94,7 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true}>
+              <BorderWithCorner bottomRight={true} style={{ marginTop: '44px' }}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="用户忠诚度" />
                   <div className={styles.centerItem}>
@@ -114,10 +120,19 @@ export default () => {
                 </div>
               </BorderWithCorner>
             </Col>
-            <Col className="gutter-row" span={6}>
-              <div style={{ border: 'solid 1px #0ff' }}>123</div>
+
+            <Col span={5}>
+              <div className={styles.bodyBg}>
+                <div className={styles.line1}></div>
+                <div className={styles.line2}></div>
+              </div>
             </Col>
+
             <Col className="gutter-row" span={5}>
+              <div className={classNames(styles.centerTitleTop)}>
+                <span className={classNames(styles.centerTitleIcon, styles.star)} />
+                <span className={styles.centerTitleText} >评价标签</span>
+              </div>
               <BorderWithCorner bottomRight={true}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="讲者标签" />
@@ -131,7 +146,7 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true}>
+              <BorderWithCorner bottomRight={true} style={{ marginTop: '44px' }}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="参会者标签" />
                   <div className={styles.centerItem}>
@@ -149,8 +164,6 @@ export default () => {
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
                     <span className={styles.centerTitle}>专注度：好</span>
-                  </div>
-                  <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
                     <span className={styles.centerTitle}>活跃度：好</span>
                   </div>
@@ -158,14 +171,60 @@ export default () => {
               </BorderWithCorner>
             </Col>
           </Row>
-          <Row gutter={16}>
-            <Col className="gutter-row" span={12}>
-              <div style={{ border: 'solid 1px #0ff' }}>123</div>
-            </Col>
-            <Col className="gutter-row" span={12}>
-              <div style={{ border: 'solid 1px #0ff' }}>123</div>
-            </Col>
-          </Row>
+
+          <div className={styles.map}>
+            <Row gutter={16}>
+              <Col className="gutter-row" span={12}>
+                <div style={{ border: 'solid 1px #0ff', height: '280px' }}></div>
+              </Col>
+              <Col className="gutter-row" span={12}>
+                <div style={{ height: '280px' }}>
+                  <SvgCardTitle>
+                    <div className={styles.title}>
+                      <div>
+                        <LoadingBar className="" />
+                      </div>
+                      <div className={styles.titleContainer}>
+                        <span className={classNames(styles.titleIcon, styles.catelog)} />
+                        <span className={styles.titleName}>内容标签</span>
+                      </div>
+                    </div>
+                  </SvgCardTitle>
+                  <BorderWithCorner topRight={true} bottomLeft={true}>
+                    <div className={styles.contentLabel}>
+                      {
+                        [
+                          { 
+                            content1: '关注主题聚词:甲状腺的预防/外科跌打损伤/骨科理疗',
+                            content2: '平均浏览时长',
+                            content3: '20min'
+                          },
+                          { 
+                            content1: '关注主题聚词:甲状腺的预防/外科跌打损伤/骨科理疗',
+                            content2: '完整浏览习惯',
+                            content3: '98%'
+                          },
+                          { 
+                            content1: '关注作者:张三李四王五赵六',
+                            content2: '反复浏览习惯',
+                            content3: '30%'
+                          },
+                          { 
+                            content1: '关注领城:甲状腺/外科/骨科',
+                            content2: '分享习惯',
+                            content3: '2.5%'
+                          },
+                        ].map((item: any) => {
+                          return <ContentLabel contents={item} />
+                        })
+                      }
+                    </div>
+                  </BorderWithCorner>
+                </div>
+              </Col>
+            </Row>
+          </div>
+
         </div>
       </ScreenBg>
     </ResizeObserver>
