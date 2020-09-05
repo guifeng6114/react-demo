@@ -94,7 +94,7 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true} style={{ marginTop: '44px' }}>
+              <BorderWithCorner bottomRight={true} style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="用户忠诚度" />
                   <div className={styles.centerItem}>
@@ -146,7 +146,7 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true} style={{ marginTop: '44px' }}>
+              <BorderWithCorner bottomRight={true} style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="参会者标签" />
                   <div className={styles.centerItem}>
@@ -175,10 +175,10 @@ export default () => {
           <div className={styles.map}>
             <Row gutter={16}>
               <Col className="gutter-row" span={12}>
-                <div style={{ border: 'solid 1px #0ff', height: '280px' }}></div>
+                <div style={{ border: 'solid 1px #0ff', height: '17.5rem' }}></div>
               </Col>
               <Col className="gutter-row" span={12}>
-                <div style={{ height: '280px' }}>
+                <div style={{ height: '17.5rem' }}>
                   <SvgCardTitle>
                     <div className={styles.title}>
                       <div>

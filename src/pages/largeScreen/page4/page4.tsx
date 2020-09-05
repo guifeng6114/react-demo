@@ -63,7 +63,7 @@ export default () => {
                 </BorderWithCorner>
               </div>
 
-              <div className={page4Styles.blockArea} style={{ marginTop: '30px' }}>
+              <div className={page4Styles.blockArea} style={{ marginTop: '1.875rem' }}>
                 <SvgCardTitle>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>
@@ -91,7 +91,7 @@ export default () => {
                 </BorderWithCorner>
               </div>
 
-              <div className={page4Styles.blockArea} style={{ marginTop: '30px' }}>
+              <div className={page4Styles.blockArea} style={{ marginTop: '1.875rem' }}>
                 <SvgCardTitle>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>

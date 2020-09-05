@@ -12,7 +12,7 @@ import ScreenCardTitle from '../show/components/screenCardTitle/screenCardTitle'
 import classNames from 'classnames';
 
 export default () => {
-  const style = { background: '#0092ff', padding: '8px 0' };
+  const style = { background: '#0092ff', padding: '.5rem 0' };
 
   return (
     <Fragment>
@@ -69,7 +69,7 @@ export default () => {
                   </div>
                 </ScreenCard>
 
-                <div style={{ marginTop: '10px' }}>
+                <div style={{ marginTop: '.625rem' }}>
                   <ScreenCard
                     title={
                       <ScreenCardTitle title="内容数据" iconType="data" />
@@ -107,7 +107,7 @@ export default () => {
                   </ScreenCard>
                 </div>
 
-                <div style={{ marginTop: '30px' }}>
+                <div style={{ marginTop: '1.875rem' }}>
                   <div className={`${styles.normalCard}`}>
                     <h4 className={styles.cardSubTitle}>
                       <span className={classNames(styles.cardSubIcon, styles.hospIcon)} />
@@ -168,7 +168,7 @@ export default () => {
                   </div>
                 </div>
 
-                <div style={{ marginTop: '30px' }}>
+                <div style={{ marginTop: '1.875rem' }}>
                   <div className={`${styles.card} ${styles.normalCard}`}>
                     <h4 className={styles.cardSubTitle}>
                       <span className={classNames(styles.cardSubIcon, styles.cupIcon)} />
@@ -233,7 +233,7 @@ export default () => {
                       </div>
                     </ScreenCard>
 
-                    <div style={{ marginTop: '30px' }}>
+                    <div style={{ marginTop: '1.875rem' }}>
                       <ScreenCard
                         title="123"
                         rightBottomCorner={{
@@ -269,7 +269,7 @@ export default () => {
                       </ScreenCard>
                     </div>
 
-                    <div style={{ marginTop: '30px' }}>
+                    <div style={{ marginTop: '1.875rem' }}>
                       <div className={`${styles.card} ${styles.normalCard}`}>
                         <h4 className={styles.cardSubTitle}>
                           <span className={classNames(styles.cardSubIcon, styles.cupIcon)} />

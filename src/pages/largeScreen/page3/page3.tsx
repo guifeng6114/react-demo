@@ -63,55 +63,59 @@ export default () => {
                 </div>
               </BorderWithCorner>
 
-              <SvgCardTitle>
-                <div className={styles.title}>
-                  <div>
-                    <LoadingBar className="" />
+              <div style={{ marginTop: '1.875rem' }}>
+                <SvgCardTitle>
+                  <div className={styles.title}>
+                    <div>
+                      <LoadingBar className="" />
+                    </div>
+                    <div className={styles.titleContainer}>
+                      <span className={classNames(styles.titleIcon, styles.user_ac)} />
+                      <span className={styles.titleName}>用户行为</span>
+                    </div>
                   </div>
-                  <div className={styles.titleContainer}>
-                    <span className={classNames(styles.titleIcon, styles.user_ac)} />
-                    <span className={styles.titleName}>用户行为</span>
+                </SvgCardTitle>
+                <BorderWithCorner topLeft={true} topRight={true}>
+                  <div className={classNames(styles['grid-2'])}>
+                    <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
+                    <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
                   </div>
-                </div>
-              </SvgCardTitle>
-              <BorderWithCorner topLeft={true} topRight={true}>
-                <div className={classNames(styles['grid-2'])}>
-                  <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '20px' }} needBorder={true} needCenter={true} />
-                  <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '20px' }} needBorder={true} needCenter={true} />
-                </div>
-              </BorderWithCorner>
-              <BorderWithCorner topLeft={true} topRight={true} style={{ borderTop: '0' }}>
-                <div className={classNames(styles['grid-2'])}>
-                  <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '20px' }} needBorder={true} needCenter={true} />
-                  <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '20px' }} needBorder={true} needCenter={true} />
-                </div>
-              </BorderWithCorner>
+                </BorderWithCorner>
+                <BorderWithCorner topLeft={true} topRight={true} style={{ borderTop: '0' }}>
+                  <div className={classNames(styles['grid-2'])}>
+                    <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
+                    <CardContentItem iconType="test" name="平均浏览量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
+                  </div>
+                </BorderWithCorner>
+              </div>
 
-              <SvgCardTitle>
-                <div className={styles.title}>
-                  <div>
-                    <LoadingBar className="" />
+              <div style={{ marginTop: '1.875rem' }}>
+                <SvgCardTitle>
+                  <div className={styles.title}>
+                    <div>
+                      <LoadingBar className="" />
+                    </div>
+                    <div className={styles.titleContainer}>
+                      <span className={classNames(styles.titleIcon, styles.hosp_bl)} />
+                      <span className={styles.titleName}>用户医院汇总</span>
+                    </div>
                   </div>
-                  <div className={styles.titleContainer}>
-                    <span className={classNames(styles.titleIcon, styles.hosp_bl)} />
-                    <span className={styles.titleName}>用户医院汇总</span>
+                </SvgCardTitle>
+                <BorderWithCorner>
+                  <div className={classNames(styles['grid-2'], styles.largeGap)} style={{ padding: '1.875rem' }}>
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
                   </div>
-                </div>
-              </SvgCardTitle>
-              <BorderWithCorner>
-                <div className={classNames(styles['grid-2'], styles.largeGap)} style={{ padding: '30px' }}>
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
-                </div>
-              </BorderWithCorner>
+                </BorderWithCorner>
+              </div>
             </Col>
             <Col className="gutter-row" offset={1} span={15}>
               <div style={{ border: 'solid 1px #0ff' }}></div>
