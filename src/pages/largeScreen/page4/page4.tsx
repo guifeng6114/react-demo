@@ -1,8 +1,7 @@
-import React from 'react';
-import ResizeObserver from 'rc-resize-observer';
+import React, { Fragment } from 'react';
 import ScreenBg from '../show/components/ScreenBg/ScreenBg';
+import ScreenCard from '@/components/ScreenCard';
 import styles from '../page1/page1.less';
-import LoadingAnime from '../show/components/load-anime/loading-anime';
 import page4Styles from './page4.less';
 import LoadingBar from '@/components/LoadingBar';
 import classNames from 'classnames';
@@ -15,7 +14,8 @@ import { Row, Col } from 'antd';
 export default () => {
 
   return (
-    <ResizeObserver
+    <Fragment>
+      {/* <ResizeObserver
       onResize={({ width }) => {
         const rootElement = document.getElementsByTagName('html')[0];
         // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
@@ -25,7 +25,7 @@ export default () => {
         }
         rootElement.style.fontSize = '16px';
       }}
-    >
+    > */}
       <ScreenBg name="热点会议" iconType="page4">
         <div className={styles.container}>
           <Row gutter={16}>
@@ -92,7 +92,7 @@ export default () => {
               </div>
 
               <div className={page4Styles.blockArea} style={{ marginTop: '1.875rem' }}>
-                <SvgCardTitle>
+                <SvgCardTitle style={{ marginBottom: '-1px', marginLeft: '1px' }}>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>
                       <LoadingBar className="" />
@@ -103,18 +103,27 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <div className={page4Styles.hospitalList}>
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                  <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
-                </div>
+                <ScreenCard
+                  leftBottomCorner={{
+                    type: 'cut',
+                    width: 30,
+                  }}
+                  borderColor="#0ff"
+                  highLightBorderColor="#0ff"
+                >
+                  <div className={page4Styles.hospitalList}>
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                    <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
+                  </div>
+                </ScreenCard>
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={18}>
@@ -150,6 +159,7 @@ export default () => {
           </Row>
         </div>
       </ScreenBg>
-    </ResizeObserver>
+      {/* </ResizeObserver> */}
+    </Fragment>
   );
 };

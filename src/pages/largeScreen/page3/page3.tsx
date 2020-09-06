@@ -1,5 +1,5 @@
-import React from 'react';
-import ResizeObserver from 'rc-resize-observer';
+import React, { Fragment } from 'react';
+import ScreenCard from '@/components/ScreenCard';
 import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import LoadingBar from '../../../components/LoadingBar';
@@ -13,7 +13,8 @@ import classNames from 'classnames';
 export default () => {
 
   return (
-    <ResizeObserver
+    <Fragment>
+      {/* <ResizeObserver
       onResize={({ width }) => {
         const rootElement = document.getElementsByTagName('html')[0];
         // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
@@ -23,7 +24,7 @@ export default () => {
         }
         rootElement.style.fontSize = '16px';
       }}
-    >
+    > */}
       <ScreenBg name="热点内容" iconType="page3">
         <div className={styles.container}>
           <Row gutter={16}>
@@ -90,7 +91,7 @@ export default () => {
               </div>
 
               <div style={{ marginTop: '1.875rem' }}>
-                <SvgCardTitle>
+                <SvgCardTitle style={{ marginBottom: '-1px', marginLeft: '1px' }}>
                   <div className={styles.title}>
                     <div>
                       <LoadingBar className="" />
@@ -101,7 +102,14 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner>
+                <ScreenCard
+                  leftBottomCorner={{
+                    type: 'cut',
+                    width: 30,
+                  }}
+                  borderColor="#0ff"
+                  highLightBorderColor="#0ff"
+                >
                   <div className={classNames(styles['grid-2'], styles.largeGap)} style={{ padding: '1.875rem' }}>
                     <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
                     <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
@@ -114,7 +122,7 @@ export default () => {
                     <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
                     <CardItem name={{ type: 'number', content: '1' }} data="内容名称内容名称" />
                   </div>
-                </BorderWithCorner>
+                </ScreenCard>
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={15}>
@@ -123,6 +131,7 @@ export default () => {
           </Row>
         </div>
       </ScreenBg>
-    </ResizeObserver>
+      {/* </ResizeObserver> */}
+    </Fragment>
   );
 };

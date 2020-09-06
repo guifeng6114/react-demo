@@ -1,5 +1,4 @@
-import React from 'react';
-import ResizeObserver from 'rc-resize-observer';
+import React, { Fragment } from 'react';
 import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import BorderWithCorner from '../show/components/borderWithCorner';
@@ -8,12 +7,14 @@ import LabelCard from '../show/components/labelCard/labelCard';
 import ContentLabel from '../show/components/contentLabelItem/contentLabelItem';
 import styles from './page2.less';
 import { Row, Col } from 'antd';
+import ScreenCard from '@/components/ScreenCard';
 import classNames from 'classnames';
 
 export default () => {
 
   return (
-    <ResizeObserver
+    <Fragment>
+      {/* <ResizeObserver
       onResize={({ width }) => {
         const rootElement = document.getElementsByTagName('html')[0];
         // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
@@ -23,24 +24,31 @@ export default () => {
         }
         rootElement.style.fontSize = '16px';
       }}
-    >
+    > */}
       <ScreenBg name="医生画像" iconType="pen">
         <div className={styles.container}>
           <Row gutter={[16, 32]}>
             <Col className="gutter-row" offset={1} span={6}>
               <div>
-                <SvgCardTitle>
+                <SvgCardTitle style={{ marginBottom: '-1px', marginLeft: '1px' }}>
                   <div className={styles.title}>
                     <div>
                       <LoadingBar className="" />
                     </div>
-                    <div className={styles.titleContainer}>
+                    <div className={classNames(styles.titleContainer)}>
                       <span className={classNames(styles.titleIcon, styles.mark)} />
                       <span className={styles.titleName}>用户标签</span>
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner topRight={true} bottomLeft={true}>
+                <ScreenCard
+                  leftBottomCorner={{
+                    type: 'cut',
+                    width: 30,
+                  }}
+                  borderColor="#0ff"
+                  highLightBorderColor="#0ff"
+                >
                   <div className={styles.doctorInfo}>
                     <div className={styles.doctorName}>刘大明</div>
                     <div className={styles.infoItem}>
@@ -71,7 +79,39 @@ export default () => {
                       </span>
                     </div>
                   </div>
-                </BorderWithCorner>
+                </ScreenCard>
+                {/* <BorderWithCorner topRight={true} bottomLeft={true}>
+                  <div className={styles.doctorInfo}>
+                    <div className={styles.doctorName}>刘大明</div>
+                    <div className={styles.infoItem}>
+                      <span className={styles.infoIcon} />
+                      <span className={styles.infoText}>消化科  主治医师</span>
+                    </div>
+                    <div className={styles.infoItem}>
+                      <span className={styles.infoIcon} />
+                      <span className={styles.infoText}>大连医科大学附属第一医院</span>
+                    </div>
+
+                    <div className={styles.labelTitle}>注册标签</div>
+                    <div className={styles.labelItem}>
+                      <span className={styles.labelIcon} />
+                      <span className={styles.labelText}>主治-脾胃领域</span>
+                    </div>
+                    <div className={styles.labelItem}>
+                      <span className={styles.labelIcon} />
+                      <span className={styles.labelText}>关注-心脑血管领域</span>
+                    </div>
+                    <div className={styles.labelItem}>
+                      <span className={styles.labelIcon} />
+                      <span className={styles.labelText}>
+                        补充标签（运行）<br />
+                        {`<聪慧>、<聪慧>、<聪慧>、`}<br />
+                        {`<聪慧>、<聪慧>、<聪慧>、`}<br />
+                        {`<聪慧>`}
+                      </span>
+                    </div>
+                  </div>
+                </BorderWithCorner> */}
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={5}>
@@ -194,22 +234,22 @@ export default () => {
                     <div className={styles.contentLabel}>
                       {
                         [
-                          { 
+                          {
                             content1: '关注主题聚词:甲状腺的预防/外科跌打损伤/骨科理疗',
                             content2: '平均浏览时长',
                             content3: '20min'
                           },
-                          { 
+                          {
                             content1: '关注主题聚词:甲状腺的预防/外科跌打损伤/骨科理疗',
                             content2: '完整浏览习惯',
                             content3: '98%'
                           },
-                          { 
+                          {
                             content1: '关注作者:张三李四王五赵六',
                             content2: '反复浏览习惯',
                             content3: '30%'
                           },
-                          { 
+                          {
                             content1: '关注领城:甲状腺/外科/骨科',
                             content2: '分享习惯',
                             content3: '2.5%'
@@ -227,6 +267,7 @@ export default () => {
 
         </div>
       </ScreenBg>
-    </ResizeObserver>
+      {/* </ResizeObserver> */}
+    </Fragment>
   );
 }

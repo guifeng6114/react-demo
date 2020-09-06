@@ -16,7 +16,7 @@ export default () => {
 
   return (
     <Fragment>
-      <ResizeObserver
+      {/* <ResizeObserver
         onResize={({ width }) => {
           const rootElement = document.getElementsByTagName('html')[0];
           // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
@@ -26,7 +26,7 @@ export default () => {
           }
           rootElement.style.fontSize = '16px';
         }}
-      >
+      > */}
         <ScreenBg name="营销大屏" iconType="screen">
           <div className={styles.container}>
             <Row gutter={16}>
@@ -359,7 +359,7 @@ export default () => {
             </Row>
           </div>
         </ScreenBg>
-      </ResizeObserver>
+      {/* </ResizeObserver> */}
     </Fragment>
   );
 };
