@@ -280,7 +280,8 @@ export default () => {
 
                       <div style={{ marginTop: '.75rem' }}>
                         <ScreenCard
-                          title="1241"
+                          title="12345"
+                          titleColor="transparent"
                           rightBottomCorner={{
                             type: 'polygon',
                             width: 60,
@@ -317,7 +318,8 @@ export default () => {
 
                       <div style={{ marginTop: '.75rem' }}>
                         <ScreenCard
-                          title="1241"
+                          title="12345"
+                          titleColor="transparent"
                           rightBottomCorner={{
                             type: 'polygon',
                             width: 60,
