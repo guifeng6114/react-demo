@@ -67,7 +67,7 @@ export default () => {
                 <SvgCardTitle>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>
-                      <LoadingAnime />
+                      <LoadingBar className="" />
                     </div>
                     <div className={page4Styles.titleArea}>
                       <span className={classNames(page4Styles.titleIcon, page4Styles.user_ac)} />
@@ -77,14 +77,14 @@ export default () => {
                 </SvgCardTitle>
                 <BorderWithCorner topLeft={true} topRight={true}>
                   <div className={page4Styles.action}>
-                    <span className={page4Styles.actionIcon} />
+                    <span className={classNames(page4Styles.actionIcon, page4Styles.listeners)} />
                     <span className={page4Styles.actionTitle}>实时在线听众</span>
                     <span className={page4Styles.actionData}>467</span>
                   </div>
                 </BorderWithCorner>
                 <BorderWithCorner topLeft={true} topRight={true} style={{ borderTop: '0' }}>
                   <div className={page4Styles.action}>
-                    <span className={page4Styles.actionIcon} />
+                    <span className={classNames(page4Styles.actionIcon, page4Styles['meet_like'])} />
                     <span className={page4Styles.actionTitle}>实时在线听众</span>
                     <span className={page4Styles.actionData}>467</span>
                   </div>
@@ -95,7 +95,7 @@ export default () => {
                 <SvgCardTitle>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>
-                      <LoadingAnime />
+                      <LoadingBar className="" />
                     </div>
                     <div className={page4Styles.titleArea}>
                       <span className={classNames(page4Styles.titleIcon, page4Styles.hosp_bl)} />
@@ -117,14 +117,14 @@ export default () => {
                 </div>
               </div>
             </Col>
-            <Col className="gutter-row" span={19}>
+            <Col className="gutter-row" offset={1} span={18}>
               <div className={page4Styles.map} />
 
               <div className={`${page4Styles.blockArea} ${page4Styles.comments}`}>
                 <SvgCardTitle>
                   <div className={page4Styles.title}>
                     <div className={page4Styles.titleLoading}>
-                      <LoadingAnime />
+                      <LoadingBar className="" />
                     </div>
                     <div className={page4Styles.titleArea}>
                       <span className={classNames(page4Styles.titleIcon, page4Styles.comments_icon)} />

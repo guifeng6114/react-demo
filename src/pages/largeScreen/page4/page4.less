@@ -65,6 +65,8 @@
       height: .75rem;
       background-color: #00FFFF;
       margin-right: .375rem;
+
+      background: url('../../../assets/img/hosp_disc.png') center / contain no-repeat;
     }
 
     .meetingName {
@@ -95,6 +97,14 @@
       height: 1.25rem;
       background-color: #00FFFF;
       margin-right: .75rem;
+
+      &.listeners {
+        background: url('../../../assets/img/listen.png') center / contain no-repeat;
+      }
+
+      &.meet_like {
+        background: url('../../../assets/img/meet_like.png') center / contain no-repeat;
+      }
     }
 
     .actionTitle {
@@ -130,8 +140,11 @@
 .map {
   width: 100%;
   height: 29.375rem;
-  border: solid 1px #00FFFF;
   padding-bottom: 1px;
+  background: url('../../../assets/img/page4_ruler.png') center no-repeat,
+    url('../../../assets/img/map.png') center no-repeat;
+  background-size: 100% 97%, 40%;
+
 }
 
 .comments {

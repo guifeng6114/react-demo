@@ -45,6 +45,7 @@
 
 	.shareItem {
 		display: flex;
+		align-items: baseline;
 	}
 
 	.shareIcon {
@@ -52,7 +53,10 @@
 		height: .875rem;
 		background: #0ff;
 		margin-right: .5rem;
-		align-self: baseline;
+
+		&.icon {
+			background: url('../../../assets/img/hosp_disc.png') center / cover no-repeat;
+		}
 	}
 
 	.shareName {
@@ -75,5 +79,10 @@
 	&.largeGap {
 		grid-gap: .8em;
 	}
+}
+.map {
+	background: url('../../../assets/img/ruler.png') center / contain no-repeat,
+		url('../../../assets/img/map.png') center / 80% no-repeat;
+	min-height: 45.75rem;
 }
 

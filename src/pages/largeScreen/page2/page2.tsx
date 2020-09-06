@@ -26,7 +26,7 @@ export default () => {
     >
       <ScreenBg name="医生画像" iconType="pen">
         <div className={styles.container}>
-          <Row gutter={[16, 40]}>
+          <Row gutter={[16, 32]}>
             <Col className="gutter-row" offset={1} span={6}>
               <div>
                 <SvgCardTitle>
