@@ -40,7 +40,7 @@ export default () => {
                   </div>
                 </div>
               </SvgCardTitle>
-              <BorderWithCorner topLeft={true} topRight={true}>
+              <BorderWithCorner topLeft topRight>
                 <div className={styles.shareContainer}>
                   <div className={styles.shareItem}>
                     <span className={classNames(styles.shareIcon, styles.icon)} />
@@ -76,16 +76,16 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner topLeft={true} topRight={true}>
+                <BorderWithCorner topLeft topRight>
                   <div className={classNames(styles['grid-2'])}>
-                    <CardContentItem iconType="active_explore" name="实时用户访问量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
-                    <CardContentItem iconType="active_share" name="实时用户转发量" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
+                    <CardContentItem iconType="active_explore" name="实时用户访问量" data="467" style={{ padding: '1.25rem' }} needBorder needCenter />
+                    <CardContentItem iconType="active_share" name="实时用户转发量" data="467" style={{ padding: '1.25rem' }} needBorder needCenter />
                   </div>
                 </BorderWithCorner>
-                <BorderWithCorner topLeft={true} topRight={true} style={{ borderTop: '0' }}>
+                <BorderWithCorner topLeft topRight style={{ borderTop: '0' }}>
                   <div className={classNames(styles['grid-2'])}>
-                    <CardContentItem iconType="high_point" name="浏览高峰时间段" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
-                    <CardContentItem iconType="av_stay_time" name="平均停留时长" data="467" style={{ padding: '1.25rem' }} needBorder={true} needCenter={true} />
+                    <CardContentItem iconType="high_point" name="浏览高峰时间段" data="467" style={{ padding: '1.25rem' }} needBorder needCenter />
+                    <CardContentItem iconType="av_stay_time" name="平均停留时长" data="467" style={{ padding: '1.25rem' }} needBorder needCenter />
                   </div>
                 </BorderWithCorner>
               </div>
@@ -126,7 +126,7 @@ export default () => {
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={15}>
-              <div className={styles.map}></div>
+              <div className={styles.map} />
             </Col>
           </Row>
         </div>

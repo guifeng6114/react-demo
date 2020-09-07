@@ -5,6 +5,7 @@ import BorderWithCorner from '../show/components/borderWithCorner';
 import LoadingBar from '../../../components/LoadingBar';
 import LabelCard from '../show/components/labelCard/labelCard';
 import ContentLabel from '../show/components/contentLabelItem/contentLabelItem';
+import ShineBlur from '../show/components/shineBlur/shineBlur';
 import styles from './page2.less';
 import { Row, Col } from 'antd';
 import ScreenCard from '@/components/ScreenCard';
@@ -119,7 +120,7 @@ export default () => {
                 <span className={styles.centerTitleText} >会议标签</span>
                 <span className={classNames(styles.centerTitleIcon, styles.chat)} />
               </div>
-              <BorderWithCorner bottomRight={true}>
+              <BorderWithCorner bottomRight>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="用户粘性" />
                   <div className={styles.centerItem}>
@@ -134,8 +135,9 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true} style={{ marginTop: '2.75rem' }}>
+              <BorderWithCorner bottomRight style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
+                  <ShineBlur style={{ top: '0', transform: 'translateY(-50%)' }} />
                   <LabelCard text="用户忠诚度" />
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
@@ -163,8 +165,8 @@ export default () => {
 
             <Col span={5}>
               <div className={styles.bodyBg}>
-                <div className={styles.line1}></div>
-                <div className={styles.line2}></div>
+                <div className={styles.line1} />
+                <div className={styles.line2} />
               </div>
             </Col>
 
@@ -173,7 +175,7 @@ export default () => {
                 <span className={classNames(styles.centerTitleIcon, styles.star)} />
                 <span className={styles.centerTitleText} >评价标签</span>
               </div>
-              <BorderWithCorner bottomRight={true}>
+              <BorderWithCorner bottomRight>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="讲者标签" />
                   <div className={styles.centerItem}>
@@ -186,7 +188,7 @@ export default () => {
                   </div>
                 </div>
               </BorderWithCorner>
-              <BorderWithCorner bottomRight={true} style={{ marginTop: '2.75rem' }}>
+              <BorderWithCorner bottomRight style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
                   <LabelCard text="参会者标签" />
                   <div className={styles.centerItem}>
@@ -215,7 +217,7 @@ export default () => {
           <div className={styles.map}>
             <Row gutter={16}>
               <Col className="gutter-row" span={12}>
-                <div style={{ border: 'solid 1px #0ff', height: '17.5rem' }}></div>
+                <div style={{ border: 'solid 1px #0ff', height: '17.5rem' }} />
               </Col>
               <Col className="gutter-row" span={12}>
                 <div style={{ height: '17.5rem' }}>
@@ -230,7 +232,7 @@ export default () => {
                       </div>
                     </div>
                   </SvgCardTitle>
-                  <BorderWithCorner topRight={true} bottomLeft={true}>
+                  <BorderWithCorner topRight bottomLeft>
                     <div className={styles.contentLabel}>
                       {
                         [
