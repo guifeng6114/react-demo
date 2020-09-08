@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react';
+import ScreenCard from '@/components/ScreenCard';
+import { Row, Col } from 'antd';
+import classNames from 'classnames';
 import ScreenBg from '../show/components/ScreenBg/ScreenBg';
 import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import BorderWithCorner from '../show/components/borderWithCorner';
@@ -7,25 +10,11 @@ import LabelCard from '../show/components/labelCard/labelCard';
 import ContentLabel from '../show/components/contentLabelItem/contentLabelItem';
 import ShineBlur from '../show/components/shineBlur/shineBlur';
 import styles from './page2.less';
-import { Row, Col } from 'antd';
-import ScreenCard from '@/components/ScreenCard';
-import classNames from 'classnames';
 
 export default () => {
 
   return (
     <Fragment>
-      {/* <ResizeObserver
-      onResize={({ width }) => {
-        const rootElement = document.getElementsByTagName('html')[0];
-        // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
-        if (width <= 1760) {
-          rootElement.style.fontSize = width / 1760 * 16 + 'px';
-          return;
-        }
-        rootElement.style.fontSize = '16px';
-      }}
-    > */}
       <ScreenBg name="医生画像" iconType="pen">
         <div className={styles.container}>
           <Row gutter={[16, 32]}>
@@ -50,6 +39,7 @@ export default () => {
                   borderColor="#0ff"
                   highLightBorderColor="#0ff"
                 >
+                  <ShineBlur top style={{ top: '.125rem' }} />
                   <div className={styles.doctorInfo}>
                     <div className={styles.doctorName}>刘大明</div>
                     <div className={styles.infoItem}>
@@ -81,38 +71,6 @@ export default () => {
                     </div>
                   </div>
                 </ScreenCard>
-                {/* <BorderWithCorner topRight={true} bottomLeft={true}>
-                  <div className={styles.doctorInfo}>
-                    <div className={styles.doctorName}>刘大明</div>
-                    <div className={styles.infoItem}>
-                      <span className={styles.infoIcon} />
-                      <span className={styles.infoText}>消化科  主治医师</span>
-                    </div>
-                    <div className={styles.infoItem}>
-                      <span className={styles.infoIcon} />
-                      <span className={styles.infoText}>大连医科大学附属第一医院</span>
-                    </div>
-
-                    <div className={styles.labelTitle}>注册标签</div>
-                    <div className={styles.labelItem}>
-                      <span className={styles.labelIcon} />
-                      <span className={styles.labelText}>主治-脾胃领域</span>
-                    </div>
-                    <div className={styles.labelItem}>
-                      <span className={styles.labelIcon} />
-                      <span className={styles.labelText}>关注-心脑血管领域</span>
-                    </div>
-                    <div className={styles.labelItem}>
-                      <span className={styles.labelIcon} />
-                      <span className={styles.labelText}>
-                        补充标签（运行）<br />
-                        {`<聪慧>、<聪慧>、<聪慧>、`}<br />
-                        {`<聪慧>、<聪慧>、<聪慧>、`}<br />
-                        {`<聪慧>`}
-                      </span>
-                    </div>
-                  </div>
-                </BorderWithCorner> */}
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={5}>
@@ -122,6 +80,7 @@ export default () => {
               </div>
               <BorderWithCorner bottomRight>
                 <div className={styles.contentCenterBlock}>
+                  <ShineBlur top />
                   <LabelCard text="用户粘性" />
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
@@ -137,7 +96,10 @@ export default () => {
               </BorderWithCorner>
               <BorderWithCorner bottomRight style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
-                  <ShineBlur style={{ top: '0', transform: 'translateY(-50%)' }} />
+                  <ShineBlur top />
+                  <ShineBlur bottom delay={2} />
+                  <ShineBlur left />
+                  <ShineBlur right delay={2} />
                   <LabelCard text="用户忠诚度" />
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
@@ -177,6 +139,7 @@ export default () => {
               </div>
               <BorderWithCorner bottomRight>
                 <div className={styles.contentCenterBlock}>
+                  <ShineBlur top />
                   <LabelCard text="讲者标签" />
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
@@ -190,6 +153,8 @@ export default () => {
               </BorderWithCorner>
               <BorderWithCorner bottomRight style={{ marginTop: '2.75rem' }}>
                 <div className={styles.contentCenterBlock}>
+                  <ShineBlur top />
+                  <ShineBlur bottom delay={1} />
                   <LabelCard text="参会者标签" />
                   <div className={styles.centerItem}>
                     <span className={styles.centerIcon} />
@@ -233,6 +198,7 @@ export default () => {
                     </div>
                   </SvgCardTitle>
                   <BorderWithCorner topRight bottomLeft>
+                    <ShineBlur top />
                     <div className={styles.contentLabel}>
                       {
                         [
@@ -269,7 +235,6 @@ export default () => {
 
         </div>
       </ScreenBg>
-      {/* </ResizeObserver> */}
     </Fragment>
   );
 }

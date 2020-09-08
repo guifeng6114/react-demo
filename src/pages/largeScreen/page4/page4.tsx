@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react';
-import ScreenBg from '../show/components/ScreenBg/ScreenBg';
+import { Row, Col } from 'antd';
 import ScreenCard from '@/components/ScreenCard';
-import styles from '../page1/page1.less';
-import page4Styles from './page4.less';
 import LoadingBar from '@/components/LoadingBar';
 import classNames from 'classnames';
+import ScreenBg from '../show/components/ScreenBg/ScreenBg';
+import styles from '../page1/page1.less';
+import page4Styles from './page4.less';
 import CardItem from '../show/components/cardItem/cardItem';
 import CommentsPool from '../show/components/commentsPool/commentsPool';
 import SvgCardTitle from '../show/components/svgCardTitle/svgCardTitle';
 import BorderWithCorner from '../show/components/borderWithCorner';
-import { Row, Col } from 'antd';
+import ShineBlur from '../show/components/shineBlur/shineBlur';
 
 export default () => {
 
@@ -42,7 +43,8 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner topLeft={true} topRight={true}>
+                <BorderWithCorner topLeft topRight>
+                  <ShineBlur top />
                   <div className={page4Styles.meetingContent}>
                     <div className={page4Styles.meetingItem}>
                       <span className={page4Styles.meetingIcon} />
@@ -75,16 +77,17 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner topLeft={true} topRight={true}>
+                <BorderWithCorner topLeft topRight>
+                  <ShineBlur top />
                   <div className={page4Styles.action}>
                     <span className={classNames(page4Styles.actionIcon, page4Styles.listeners)} />
                     <span className={page4Styles.actionTitle}>实时在线听众</span>
                     <span className={page4Styles.actionData}>467</span>
                   </div>
                 </BorderWithCorner>
-                <BorderWithCorner topLeft={true} topRight={true} style={{ borderTop: '0' }}>
+                <BorderWithCorner topLeft topRight style={{ borderTop: '0' }}>
                   <div className={page4Styles.action}>
-                    <span className={classNames(page4Styles.actionIcon, page4Styles['meet_like'])} />
+                    <span className={classNames(page4Styles.actionIcon, page4Styles.meet_like)} />
                     <span className={page4Styles.actionTitle}>实时在线听众</span>
                     <span className={page4Styles.actionData}>467</span>
                   </div>
@@ -111,6 +114,7 @@ export default () => {
                   borderColor="#0ff"
                   highLightBorderColor="#0ff"
                 >
+                  <ShineBlur top style={{ top: '.125rem' }} />
                   <div className={page4Styles.hospitalList}>
                     <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
                     <CardItem name={{ type: 'number', content: '1' }} data="大连医科大学附属第一医院" />
@@ -127,7 +131,11 @@ export default () => {
               </div>
             </Col>
             <Col className="gutter-row" offset={1} span={18}>
-              <div className={page4Styles.map} />
+              <div className={page4Styles.map}>
+                <ShineBlur left style={{ left: '1rem', height: '97%', top: '.4375rem' }} />
+                <ShineBlur bottom delay={2} style={{ bottom: '.5rem', width: '98%', left: '0', right: '0' }} />
+                <ShineBlur right delay={4} reverse style={{ right: '.875rem', height: '97%', top: '.4375rem' }} />
+              </div>
 
               <div className={`${page4Styles.blockArea} ${page4Styles.comments}`}>
                 <SvgCardTitle>
@@ -141,7 +149,8 @@ export default () => {
                     </div>
                   </div>
                 </SvgCardTitle>
-                <BorderWithCorner topLeft={true} topRight={true}>
+                <BorderWithCorner topLeft topRight>
+                  <ShineBlur top />
                   <div className={page4Styles.commentsContainer}>
                     <CommentsPool
                       comments={
