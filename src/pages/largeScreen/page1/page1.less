@@ -148,7 +148,7 @@
       height: 14px;
       background: url('../../../assets/img/clock.png') center / contain no-repeat;
     }
-    
+
     span {
       font-size: 1rem;
       color: #0ff;
@@ -180,5 +180,39 @@
   background: url('../../../assets/img/page1_ruler.png') center / 96% no-repeat,
   url('../../../assets/img/map.png') center / 80% no-repeat;
   height: 30.75rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.mapTabs {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: baseline;
+  color: rgba(0, 255, 255, 0.479);
+
+  li {
+    font-weight: bold;
+    margin: 0 14px;
+    cursor: pointer;
+
+    &.active {
+      color: #0ff;
+      font-size: 20px;
+      position: relative;
+      padding: 8px 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 80%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0ff;
+        margin: auto;
+      }
+    }
+  }
 }

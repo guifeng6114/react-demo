@@ -16,17 +16,6 @@ export default () => {
 
   return (
     <Fragment>
-      {/* <ResizeObserver
-      onResize={({ width }) => {
-        const rootElement = document.getElementsByTagName('html')[0];
-        // const fontSizeRoot = getComputedStyle(rootElement).fontSize.slice(0, -2);
-        if (width <= 1760) {
-          rootElement.style.fontSize = width / 1760 * 16 + 'px';
-          return;
-        }
-        rootElement.style.fontSize = '16px';
-      }}
-    > */}
       <ScreenBg name="热点会议" iconType="page4">
         <div className={styles.container}>
           <Row gutter={16}>
@@ -168,7 +157,6 @@ export default () => {
           </Row>
         </div>
       </ScreenBg>
-      {/* </ResizeObserver> */}
     </Fragment>
   );
 };
